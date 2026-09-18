@@ -42,6 +42,24 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modalTitle">Book Service</h2>
+    <p id="modalCreator" class="creator"></p>
+    
+    <form id="bookingForm" onsubmit="confirmBooking(event)">
+      <label for="clientName">Your Name:</label>
+      <input type="text" id="clientName" required placeholder="John Doe">
+
+      <label for="bookingDate">Preferred Date:</label>
+      <input type="date" id="bookingDate" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
